@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cfdepd0bbnktm"]
 
-[ext_resource type="Script" path="res://Scenes/Scripts/key.gd" id="1_iw3qt"]
+[ext_resource type="Script" path="res://Scripts/key.gd" id="1_iw3qt"]
 [ext_resource type="Script" path="res://Scenes/key.gd" id="2_lvrer"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_pnong"]

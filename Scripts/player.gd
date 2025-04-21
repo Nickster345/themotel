@@ -10,6 +10,8 @@ extends CharacterBody3D
 @export var crouch_camera_offset := -0.5  # Camera movement when crouching
 @export var crouch_transition_speed := 8.0  # Speed of the transition
 
+@export var journal_inv: JournalInventory
+
 @onready var camera = $Camera3D
 @onready var collision_shape = $CollisionShape3D
 

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="JournalInventory" load_steps=4 format=3 uid="uid://djwkwx1oakjt6"]
+
+[ext_resource type="Script" path="res://JournalInventory/journal_item.gd" id="1_85q2j"]
+[ext_resource type="Resource" uid="uid://bkt2rh35g7xlw" path="res://JournalInventory/items/journal_entry_1.tres" id="2_54h4k"]
+[ext_resource type="Script" path="res://JournalInventory/journal_inventory.gd" id="3_ine67"]
+
+[resource]
+script = ExtResource("3_ine67")
+items = Array[ExtResource("1_85q2j")]([ExtResource("2_54h4k"), null, null, ExtResource("2_54h4k"), null, null, null, null, null, null, ExtResource("2_54h4k"), null])
