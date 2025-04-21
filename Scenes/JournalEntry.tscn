@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://7662e3rabani"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/journal_entry.gd" id="1_r6aec"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxegu"]
+albedo_color = Color(0.944953, 0.88817, 0.873142, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4eqe3"]
+material = SubResource("StandardMaterial3D_pxegu")
+size = Vector2(0.3, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_evup5"]
+size = Vector3(0.303223, 0.00360107, 0.20121)
+
+[node name="Node3D" type="Node3D" groups=["interactable"]]
+
+[node name="JournalEntry" type="StaticBody3D" parent="." groups=["interactable"]]
+script = ExtResource("1_r6aec")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JournalEntry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0982433, 0.00151792, 0.103239)
+mesh = SubResource("PlaneMesh_4eqe3")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="JournalEntry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0998535, 0.00770962, 0.104427)
+shape = SubResource("BoxShape3D_evup5")
