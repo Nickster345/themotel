@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://uqe7ia3xpnn5"]
+
+[ext_resource type="Script" path="res://JournalInventory/journ_inv_ui.gd" id="1_b0dte"]
+[ext_resource type="PackedScene" uid="uid://bpb2ngnf5fati" path="res://JournalInventory/journal_inv_ui_slot.tscn" id="2_os3vm"]
+
+[node name="Journ_Inv_UI" type="Control"]
+custom_minimum_size = Vector2(196, 151)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -478.5
+offset_top = -249.5
+offset_right = 478.5
+offset_bottom = 249.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b0dte")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = -124.0
+offset_right = 166.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="journal_inv_UI_slot1" parent="GridContainer" instance=ExtResource("2_os3vm")]
+layout_mode = 2
+
+[node name="journal_inv_UI_slot2" parent="GridContainer" instance=ExtResource("2_os3vm")]
+layout_mode = 2
+
+[node name="journal_inv_UI_slot3" parent="GridContainer" instance=ExtResource("2_os3vm")]
+layout_mode = 2
+
+[node name="journal_inv_UI_slot4" parent="GridContainer" instance=ExtResource("2_os3vm")]
+layout_mode = 2
+
+[node name="journal_inv_UI_slot5" parent="GridContainer" instance=ExtResource("2_os3vm")]
+layout_mode = 2
+
+[node name="journal_inv_UI_slot6" parent="GridContainer" instance=ExtResource("2_os3vm")]
+layout_mode = 2
+
+[node name="journal_inv_UI_slot7" parent="GridContainer" instance=ExtResource("2_os3vm")]
+layout_mode = 2
+
+[node name="journal_inv_UI_slot8" parent="GridContainer" instance=ExtResource("2_os3vm")]
+layout_mode = 2
+
+[node name="journal_inv_UI_slot9" parent="GridContainer" instance=ExtResource("2_os3vm")]
+layout_mode = 2
+
+[node name="journal_inv_UI_slot10" parent="GridContainer" instance=ExtResource("2_os3vm")]
+layout_mode = 2
+
+[node name="journal_inv_UI_slot11" parent="GridContainer" instance=ExtResource("2_os3vm")]
+layout_mode = 2
+
+[node name="journal_inv_UI_slot12" parent="GridContainer" instance=ExtResource("2_os3vm")]
+layout_mode = 2

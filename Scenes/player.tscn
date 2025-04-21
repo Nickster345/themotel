@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhegnxpmb64ku"]
+[gd_scene load_steps=6 format=3 uid="uid://dhegnxpmb64ku"]
 
-[ext_resource type="Script" path="res://Scenes/Scripts/player.gd" id="1_xr8xd"]
-[ext_resource type="Script" path="res://Scenes/Scripts/Raycast.gd" id="2_apjd6"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_xr8xd"]
+[ext_resource type="Script" path="res://Scripts/Raycast.gd" id="2_apjd6"]
+[ext_resource type="Resource" uid="uid://djwkwx1oakjt6" path="res://JournalInventory/journal_inventory.tres" id="2_ju1a3"]
+[ext_resource type="PackedScene" uid="uid://uqe7ia3xpnn5" path="res://JournalInventory/journ_inv_ui.tscn" id="4_j83ux"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mljml"]
 
@@ -10,6 +12,7 @@
 [node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34142, 0)
 script = ExtResource("1_xr8xd")
+journal_inv = ExtResource("2_ju1a3")
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.472643, 0)
@@ -20,3 +23,16 @@ target_position = Vector3(0, 0, -5)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 shape = SubResource("CapsuleShape3D_mljml")
+
+[node name="Journ_Inv_UI" parent="." instance=ExtResource("4_j83ux")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -75.5
+offset_right = 98.0
+offset_bottom = 75.5
+grow_horizontal = 2
+grow_vertical = 2
