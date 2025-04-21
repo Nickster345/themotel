@@ -22,6 +22,8 @@ var target_height
 
 var keys_collected : int = 0  # Keep track of collected keys
 
+var journal_entries_collected : int = 0 
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	add_to_group("player")
@@ -78,6 +80,10 @@ func _physics_process(delta):
 func add_key():
 	keys_collected += 1
 	print("Key collected! Total keys:", keys_collected)
+	
+func add_journalentry():
+	journal_entries_collected += 1
+	print("Journal entry collected! Total entries:", journal_entries_collected)
 
 # Function to use a key
 func use_key(amount: int) -> bool:

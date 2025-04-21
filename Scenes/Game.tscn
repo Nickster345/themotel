@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cch3byl7cgc8o"]
+[gd_scene load_steps=8 format=3 uid="uid://cch3byl7cgc8o"]
 
 [ext_resource type="PackedScene" uid="uid://dhegnxpmb64ku" path="res://Scenes/player.tscn" id="2_o0m5w"]
 [ext_resource type="PackedScene" uid="uid://cfdepd0bbnktm" path="res://Scenes/Key.tscn" id="3_f8mo0"]
 [ext_resource type="PackedScene" uid="uid://dws2s3mrrjpqh" path="res://Scenes/Door.tscn" id="3_wr3v7"]
 [ext_resource type="PackedScene" uid="uid://c5xkn6euahcas" path="res://Scenes/Room Test.tscn" id="4_jsyir"]
+[ext_resource type="PackedScene" uid="uid://7662e3rabani" path="res://Scenes/JournalEntry.tscn" id="5_xbouo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cu424"]
 size = Vector3(1, 0.589722, 1)
@@ -42,3 +43,6 @@ transform = Transform3D(1.32514, 0, 0, 0, 1.03408, 0, 0, 0, 1, -17.7335, 1.57334
 
 [node name="Room" parent="." instance=ExtResource("4_jsyir")]
 transform = Transform3D(0.573804, 0, 0, 0, 0.503978, 0, 0, 0, 0.493849, -20, 0, 2)
+
+[node name="Node3D" parent="." instance=ExtResource("5_xbouo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.3222, 0.956859, 2.70422)
