@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dws2s3mrrjpqh"]
+
+[ext_resource type="Script" path="res://Scenes/door.gd" id="1_l7sva"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wdwmr"]
+size = Vector3(1, 1, 0.140137)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2guyt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aow4b"]
+size = Vector3(1, 1, 3.35083)
+
+[node name="Pivot" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.725671, 0, 0)
+
+[node name="Door" type="StaticBody3D" parent="." groups=["interactable"]]
+script = ExtResource("1_l7sva")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door"]
+transform = Transform3D(1.44886, 0, 0, 0, 3.02627, 0, 0, 0, 0.0973304, 0, 0, -0.0065918)
+shape = SubResource("BoxShape3D_wdwmr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Door"]
+transform = Transform3D(1.44886, 0, 0, 0, 3.02627, 0, 0, 0, 0.0973304, 0, 0, 0)
+mesh = SubResource("BoxMesh_2guyt")
+
+[node name="DoorArea" type="Area3D" parent="Door"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/DoorArea"]
+transform = Transform3D(1.44886, 0, 0, 0, 3.02627, 0, 0, 0, 0.0973304, 0, 0, -0.027291)
+shape = SubResource("BoxShape3D_aow4b")

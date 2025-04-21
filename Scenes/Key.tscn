@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfdepd0bbnktm"]
+
+[ext_resource type="Script" path="res://Scenes/Scripts/key.gd" id="1_iw3qt"]
+[ext_resource type="Script" path="res://Scenes/key.gd" id="2_lvrer"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pnong"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t1sps"]
+
+[node name="Node3D" type="Node3D" groups=["interactable"]]
+script = ExtResource("1_iw3qt")
+
+[node name="Key" type="StaticBody3D" parent="." groups=["interactable"]]
+script = ExtResource("2_lvrer")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Key" groups=["interactable"]]
+mesh = SubResource("BoxMesh_pnong")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Key" groups=["interactable"]]
+shape = SubResource("BoxShape3D_t1sps")

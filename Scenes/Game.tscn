@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://cch3byl7cgc8o"]
+
+[ext_resource type="PackedScene" uid="uid://dhegnxpmb64ku" path="res://Scenes/player.tscn" id="2_o0m5w"]
+[ext_resource type="PackedScene" uid="uid://cfdepd0bbnktm" path="res://Scenes/Key.tscn" id="3_f8mo0"]
+[ext_resource type="PackedScene" uid="uid://dws2s3mrrjpqh" path="res://Scenes/Door.tscn" id="3_wr3v7"]
+[ext_resource type="PackedScene" uid="uid://c5xkn6euahcas" path="res://Scenes/Room Test.tscn" id="4_jsyir"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cu424"]
+size = Vector3(1, 0.589722, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vl181"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, -0.205139, 0)
+shape = SubResource("BoxShape3D_cu424")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("PlaneMesh_vl181")
+
+[node name="Key" parent="." instance=ExtResource("3_f8mo0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6483, 3.05116, 6.76407)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.722991, 0.690857, 0, -0.690857, -0.722991, 0, 4.94127, 0)
+
+[node name="Key 3" parent="." instance=ExtResource("3_f8mo0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.8894, 0.935433, -2.18221)
+
+[node name="Key2" parent="." instance=ExtResource("3_f8mo0")]
+transform = Transform3D(2.51828, 0, 0, 0, 0.468255, 0, 0, 0, 4.07301, -21.6415, 0.722731, 3.78492)
+
+[node name="Player" parent="." instance=ExtResource("2_o0m5w")]
+transform = Transform3D(1, 0, 0, 0, 1.16012, 0, 0, 0, 1, -17.2882, -0.206158, -0.908921)
+
+[node name="Door" parent="." instance=ExtResource("3_wr3v7")]
+transform = Transform3D(1.32514, 0, 0, 0, 1.03408, 0, 0, 0, 1, -17.7335, 1.57334, -3.39975)
+
+[node name="Room" parent="." instance=ExtResource("4_jsyir")]
+transform = Transform3D(0.573804, 0, 0, 0, 0.503978, 0, 0, 0, 0.493849, -20, 0, 2)

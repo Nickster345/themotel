@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct60udkiq0cur"]
+
+[ext_resource type="PackedScene" uid="uid://cx7xdkgwnf68c" path="res://Models/RoomWhiteBox.glb" id="1_wpsi8"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="RoomWhiteBox" parent="." instance=ExtResource("1_wpsi8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45377, 0, -1.22957)
