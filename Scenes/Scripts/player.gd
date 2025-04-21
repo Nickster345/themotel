@@ -83,7 +83,7 @@ func add_key():
 func use_key(amount: int) -> bool:
 	if keys_collected >= amount:  # Check if the player has enough keys
 		keys_collected -= amount  # Subtract the used keys
-		print("Key used! Keys left:", keys_collected) # prints how many keys you have left
+		print("Key used! Keys left:", keys_collected) 
 		return true  # Successfully used a key
 	else:
 		print("You don’t have a key")
