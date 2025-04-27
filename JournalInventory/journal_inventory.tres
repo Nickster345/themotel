@@ -1,9 +1,44 @@
-[gd_resource type="Resource" script_class="JournalInventory" load_steps=4 format=3 uid="uid://djwkwx1oakjt6"]
+[gd_resource type="Resource" script_class="JournalInventory" load_steps=15 format=3 uid="uid://djwkwx1oakjt6"]
 
-[ext_resource type="Script" path="res://JournalInventory/journal_item.gd" id="1_85q2j"]
-[ext_resource type="Resource" uid="uid://bkt2rh35g7xlw" path="res://JournalInventory/items/journal_entry_1.tres" id="2_54h4k"]
+[ext_resource type="Script" path="res://journal_inv_slot.gd" id="2_ibj28"]
 [ext_resource type="Script" path="res://JournalInventory/journal_inventory.gd" id="3_ine67"]
+
+[sub_resource type="Resource" id="Resource_8v8gh"]
+script = ExtResource("2_ibj28")
+
+[sub_resource type="Resource" id="Resource_ido0d"]
+script = ExtResource("2_ibj28")
+
+[sub_resource type="Resource" id="Resource_n3iv8"]
+script = ExtResource("2_ibj28")
+
+[sub_resource type="Resource" id="Resource_5k0b4"]
+script = ExtResource("2_ibj28")
+
+[sub_resource type="Resource" id="Resource_ve6h6"]
+script = ExtResource("2_ibj28")
+
+[sub_resource type="Resource" id="Resource_mp1fu"]
+script = ExtResource("2_ibj28")
+
+[sub_resource type="Resource" id="Resource_n8wa2"]
+script = ExtResource("2_ibj28")
+
+[sub_resource type="Resource" id="Resource_847uy"]
+script = ExtResource("2_ibj28")
+
+[sub_resource type="Resource" id="Resource_8a7yq"]
+script = ExtResource("2_ibj28")
+
+[sub_resource type="Resource" id="Resource_b3htu"]
+script = ExtResource("2_ibj28")
+
+[sub_resource type="Resource" id="Resource_wn3te"]
+script = ExtResource("2_ibj28")
+
+[sub_resource type="Resource" id="Resource_r7nen"]
+script = ExtResource("2_ibj28")
 
 [resource]
 script = ExtResource("3_ine67")
-items = Array[ExtResource("1_85q2j")]([ExtResource("2_54h4k"), null, null, ExtResource("2_54h4k"), null, null, null, null, null, null, ExtResource("2_54h4k"), null])
+slots = Array[ExtResource("2_ibj28")]([SubResource("Resource_8v8gh"), SubResource("Resource_ido0d"), SubResource("Resource_n3iv8"), SubResource("Resource_5k0b4"), SubResource("Resource_ve6h6"), SubResource("Resource_mp1fu"), SubResource("Resource_n8wa2"), SubResource("Resource_847uy"), SubResource("Resource_8a7yq"), SubResource("Resource_b3htu"), SubResource("Resource_wn3te"), SubResource("Resource_r7nen")])

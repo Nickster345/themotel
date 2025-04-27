@@ -1,7 +1,5 @@
 extends Resource
 
-
-
 class_name JournalItem
 
 @export var name: String = ""

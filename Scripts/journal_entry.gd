@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-@export var key_name : String = "Journal Entry"
+@export var item : JournalItem
 var is_picked_up = false
 
 func _ready():
@@ -13,7 +13,7 @@ func on_interact():
 			var character_body = player.get_node("Player")
 			if character_body:
 				if character_body.has_method("add_journalentry"):
-					character_body.add_journalentry()
+					character_body.add_journalentry(item)
 					is_picked_up = true
 					remove_from_group("interactable")
 					queue_free()
