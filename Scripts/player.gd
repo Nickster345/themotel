@@ -22,9 +22,20 @@ var default_camera_position
 var target_camera_position
 var target_height
 
-var keys_collected : int = 0  # Keep track of collected keys
-
+var keys_collected : int = 0 
 var journal_entries_collected : int = 0 
+
+var is_movement_enabled := true  # New variable to control movement
+
+func freeze_movement():
+	is_movement_enabled = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)  # Show and unlock the mouse
+	print("freeze called")
+
+func unfreeze_movement():
+	is_movement_enabled = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)  # Hide and lock the mouse back to the window
+	print("unfreeze called")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -34,12 +45,22 @@ func _ready():
 	target_height = standing_height
 
 func _input(event):
+	if not is_movement_enabled:
+		return
+	
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		camera.rotate_x(-event.relative.y * mouse_sensitivity)
 		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -90, 90)
 
 func _physics_process(delta):
+	
+	if not is_movement_enabled:
+		velocity.x = 0
+		velocity.z = 0
+		move_and_slide()
+		return
+		
 	var input_dir = Vector3.ZERO
 	if Input.is_action_pressed("move_forward"):
 		input_dir.z -= 1
