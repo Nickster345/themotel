@@ -83,9 +83,10 @@ func add_key():
 	keys_collected += 1
 	print("Key collected! Total keys:", keys_collected)
 	
-func add_journalentry():
+func add_journalentry(item):
 	journal_entries_collected += 1
 	print("Journal entry collected! Total entries:", journal_entries_collected)
+	journal_inv.insert(item)
 
 # Function to use a key
 func use_key(amount: int) -> bool:

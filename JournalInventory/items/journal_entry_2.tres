@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="JournalItem" load_steps=3 format=3 uid="uid://db8cpis2408ls"]
+
+[ext_resource type="Script" path="res://JournalInventory/journal_item.gd" id="1_xskch"]
+[ext_resource type="Texture2D" uid="uid://dhxgw28tv1utm" path="res://JournalInventory/journal_item.png" id="2_58nm6"]
+
+[resource]
+script = ExtResource("1_xskch")
+name = "journal_entry_2"
+texture = ExtResource("2_58nm6")

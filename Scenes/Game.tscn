@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cch3byl7cgc8o"]
+[gd_scene load_steps=9 format=3 uid="uid://cch3byl7cgc8o"]
 
 [ext_resource type="PackedScene" uid="uid://dhegnxpmb64ku" path="res://Scenes/player.tscn" id="2_o0m5w"]
 [ext_resource type="PackedScene" uid="uid://cfdepd0bbnktm" path="res://Scenes/Key.tscn" id="3_f8mo0"]
 [ext_resource type="PackedScene" uid="uid://dws2s3mrrjpqh" path="res://Scenes/Door.tscn" id="3_wr3v7"]
 [ext_resource type="PackedScene" uid="uid://c5xkn6euahcas" path="res://Scenes/Room Test.tscn" id="4_jsyir"]
 [ext_resource type="PackedScene" uid="uid://7662e3rabani" path="res://Scenes/JournalEntry.tscn" id="5_xbouo"]
+[ext_resource type="Resource" uid="uid://db8cpis2408ls" path="res://JournalInventory/items/journal_entry_2.tres" id="6_68c05"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cu424"]
 size = Vector3(1, 0.589722, 1)
@@ -46,3 +47,10 @@ transform = Transform3D(0.573804, 0, 0, 0, 0.503978, 0, 0, 0, 0.493849, -20, 0, 
 
 [node name="Node3D" parent="." instance=ExtResource("5_xbouo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.3222, 0.956859, 2.70422)
+item = ExtResource("6_68c05")
+
+[node name="Node3D2" parent="." instance=ExtResource("5_xbouo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1423, 0.956858, 1.87073)
+
+[node name="Node3D3" parent="." instance=ExtResource("5_xbouo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7654, 0.956859, 3.34549)
